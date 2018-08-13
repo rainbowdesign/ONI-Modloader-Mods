@@ -30,7 +30,7 @@ namespace OnionPatches
 		*/
 
 
-		[HarmonyPatch(typeof(DebugHandler))]
+		[HarmonyPatch(typeof(DebugHandler), MethodType.Constructor)]
         public static class DebugHandlerMod
 		{
 			public static void Postfix(DebugHandler __instance)

@@ -635,7 +635,7 @@
             }
         }
 
-		[HarmonyPatch(typeof(KeyDef))]
+		[HarmonyPatch(typeof(KeyDef), MethodType.Constructor)]
 		[HarmonyPatch(new Type[] {typeof(KKeyCode), typeof(Modifier) })]
 		public static class KeyDef_Constructor
 		{
@@ -648,7 +648,7 @@
 			}
 		}
 
-		[HarmonyPatch(typeof(KInputController))]
+		[HarmonyPatch(typeof(KInputController), MethodType.Constructor)]
 		[HarmonyPatch(new Type[] { typeof(bool) })]
 		public static class KInputController_Constructor
 		{

@@ -9,7 +9,7 @@ using UnityEngine;
 namespace RoomSizeMod
 {
 
-    [HarmonyPatch(typeof(RoomProber))]
+    [HarmonyPatch(typeof(RoomProber), MethodType.Constructor)]
     internal class RoomSizeMod_RoomProber
     {
 
